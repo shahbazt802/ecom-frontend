@@ -14,25 +14,34 @@ import { LoginScreen } from "./screen/LoginScreen";
 
 import { RegisterScreen } from "./screen/RegisterScreen";
 
+import ProfileScreen from "./screen/ProfileScreen";
+import Shipping_Screen from "./screen/Shipping_Screen";
+import PaymentScreen from "./screen/PaymentScreen";
+import PlaceOrderScreen from "./screen/PlaceOrderScreen";
+
 function App() {
-	return (
-		<Router>
-			<Header />
-			<main>
-				<Container className='py-3'>
-					<Routes>
-						<Route path='/' element={<HomeScreen />} exact />
-						<Route path='/login' element={<LoginScreen />} />
-						<Route path='/register' element={<RegisterScreen />} />
-						<Route path='/products/:id' element={<ProductScreen />} />
-						<Route path='/cart/:id?' element={<CartScreen />} />
-						{/* <HomeScreen /> */}
-					</Routes>
-				</Container>
-			</main>
-			<Footer />
-		</Router>
-	);
+  return (
+    <Router>
+      <Header />
+      <main>
+        <Container className='py-3'>
+          <Routes>
+            <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/login' element={<LoginScreen />} />
+            <Route path='/register' element={<RegisterScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
+            <Route path='/products/:id' element={<ProductScreen />} />
+            <Route path='/cart/:id?' element={<CartScreen />} />
+            <Route path='/shipping' element={<Shipping_Screen />} />
+            <Route path='/payment' element={<PaymentScreen />} />
+            <Route path='/placeorder' element={<PlaceOrderScreen />} />
+            {/* <HomeScreen /> */}
+          </Routes>
+        </Container>
+      </main>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
